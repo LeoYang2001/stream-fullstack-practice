@@ -1,0 +1,10 @@
+version: v1
+plugins:
+  # Frontend ConnectRPC client
+  - plugin: buf.build/connectrpc/es:v1.4.0
+    out: frontend/src/generated
+    opt: target=ts
+  # Backend ConnectRPC (same plugin, different output)
+  - plugin: buf.build/connectrpc/es:v1.4.0
+    out: backend/src/generated
+    opt: target=ts

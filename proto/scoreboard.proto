@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package scoreboard.v1;
+
+service ScoreboardService {
+  rpc SubscribeScores(SubscribeScoresRequest) returns (stream ScoreUpdate);
+}
+
+message SubscribeScoresRequest {
+  string game_id = 1;
+}
+
+message ScoreUpdate {
+  string game_id = 1;
+  string team_home = 2;
+  string team_away = 3;
+  uint32 score_home = 4;
+  uint32 score_away = 5;
+  string status = 6;  // "1Q", "2Q", "HALF", "3Q", "4Q", "FINAL"
+}
