@@ -21,6 +21,5 @@ export const ScoreboardService = {
       O: ScoreUpdate,
       kind: MethodKind.ServerStreaming,
     },
-  }
+  },
 } as const;
-

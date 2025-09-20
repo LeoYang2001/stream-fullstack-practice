@@ -1,0 +1,30 @@
+{
+  "name": "scoreboard-backend",
+  "version": "1.0.0",
+  "description": "ConnectRPC backend for basketball score streaming",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/server.ts",
+    "dev:simple": "tsx watch src/simple-server.ts",
+    "start": "node dist/server.js",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@connectrpc/connect": "^1.4.0",
+    "@connectrpc/connect-node": "^1.4.0",
+    "@connectrpc/connect-fastify": "^1.4.0",
+    "fastify": "^4.24.0",
+    "@fastify/cors": "^8.4.0",
+    "@bufbuild/protobuf": "^1.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "tsx": "^4.1.0",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
